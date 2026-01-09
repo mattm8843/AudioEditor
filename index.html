@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- This is free and unencumbered software released into the public domain. -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Audio editor</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+	</head>
+	<body>
+		<header>
+			<div class="noMarginDiv" id="actionDiv">
+				<button class="shortBtn" id="undoButton" title="Undo">
+					<img src="assets/undo.svg" width="30" height="30">
+				</button>
+				<button class="shortBtn" id="redoButton" title="Redo">
+					<img src="assets/redo.svg" width="30" height="30">
+				</button>
+			</div>
+			<button id="saveButton">Save</button>
+		</header>
+
+		<main>
+
+			<div class="sectionDiv" id="uploadDiv">
+				<label for="fileInput" id="fileLabel">Select a file on your device</label>
+				<input type="file" id="fileInput">
+				<span id="fileSpan">No file selected</span>
+			</div>
+
+			<!-- Trim -->
+			<section>
+				<div class="sectionTitleDiv">
+					<h2 id="trimH2">Trim</h2>
+					<button id="applyTrim">Apply</button>
+				</div>
+				<div class="sectionDiv">
+					<div class="noMarginDiv">
+						<label for="trimStart" id="trimStartLabel">Start:</label>
+						<div class="spinbox">
+							<input type="text" id="trimStart" value="00:00">
+							<button class="up">⌃</button>
+							<button class="down">⌄</button>
+						</div>
+					</div>
+					<div class="noMarginDiv">
+						<label for="trimEnd" id="trimEndLabel">End:</label>
+						<div class="spinbox">
+							<input type="text" id="trimEnd" value="00:00">
+							<button class="up">⌃</button>
+							<button class="down">⌄</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Speed -->
+			<section>
+				<div class="sectionTitleDiv">
+					<h2 id="speedH2">Speed</h2>
+					<button id="applySpeed">Apply</button>
+				</div>
+				<div class="sectionDiv">
+					<input type="range" id="speedRange" value="1" min="0.2" max="10" step="0.1">
+					<div class="spinbox">
+						<input type="text" id="speedSpinbox" inputmode="decimal" value="1">
+						<button class="up">⌃</button>
+						<button class="down">⌄</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Pitch -->
+			<section>
+				<div class="sectionTitleDiv">
+					<h2 id="pitchH2">Pitch</h2>
+					<button id="applyPitch">Apply</button>
+				</div>
+				<div class="sectionDiv">
+					<input type="range" id="pitchRange" value="1" min="0.2" max="10" step="0.1">
+					<div class="spinbox">
+						<input type="text" id="pitchSpinbox" inputmode="decimal" value="1">
+						<button class="up">⌃</button>
+						<button class="down">⌄</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Volume -->
+			<section>
+				<div class="sectionTitleDiv">
+					<h2 id="volumeH2">Volume</h2>
+					<button id="applyVolume">Apply</button>
+				</div>
+				<div class="sectionDiv">
+					<input type="range" id="volumeRange" value="1" min="0.2" max="10" step="0.1">
+					<div class="spinbox">
+						<input type="text" id="volumeSpinbox" inputmode="decimal" value="1">
+						<button class="up">⌃</button>
+						<button class="down">⌄</button>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+			<div class="noMarginDiv" id="audioControls">
+				<audio id="player"></audio>
+				<button class="shortBtn" id="playBtn" title="Play"></button>
+				<button class="shortBtn" id="pauseBtn" title="Pause"></button>
+				<label for="audioRange" id="timeLabel">00:00 / 00:00</label>
+				<input type="range" id="audioRange" value="1" min="0" max="1" step="1">
+			</div>
+		</footer>
+
+		<script type="module" src="renderer.js"></script>
+		<script type="module" src="tools.js"></script>
+	</body>
+</html>

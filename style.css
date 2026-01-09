@@ -1,0 +1,275 @@
+* {
+	font-size: 16px;
+	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	color: white;
+	background: linear-gradient(135deg, #14141f, #8585ad);
+	min-height: 100vh;
+}
+
+header, footer {
+	display: flex;
+	align-items: center;
+	left: 0;
+	right: 0;
+	min-height: 50px;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+header {
+	position: sticky;
+	justify-content: space-between;
+	z-index: 1000;
+	top: 0;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+}
+
+#audioControls {
+	width: 100%;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+section:hover {
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.sectionTitleDiv {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sectionDiv, #audioControls, #actionDiv {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#uploadDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+}
+
+#fileSpan {
+	overflow-wrap: break-word;
+	text-align: center;
+}
+
+header *, footer *, section *, #uploadDiv * {
+	margin: 10px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+button, #fileLabel {
+	border: none;
+	color: white;
+	background: linear-gradient(135deg, #0066ff, #00ccff);
+}
+
+button:hover, #fileLabel:hover {
+	background: linear-gradient(135deg, #00ccff, #0066ff);
+	transform: scale(1.05);
+}
+
+button:active, #fileLabel:active {
+	transform: scale(0.95);
+}
+
+label {
+	display: block;
+}
+
+.spinbox {
+	display: inline-block;
+	position: relative;
+}
+
+.spinbox button {
+	position: absolute;
+	padding: 0;
+	right: 5px;
+	min-width: 15px;
+	width: 15px;
+	height: 15px;
+	border-radius: 5px;
+	background: transparent;
+}
+
+.spinbox .up {
+	top: 5px;
+}
+
+.spinbox .down {
+	bottom: 5px;
+}
+
+input[type="text"] {
+	border: none;
+	width: 150px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+button, input[type="text"], #fileLabel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 10px;
+	min-width: 150px;
+}
+
+button, #fileLabel, input[type="range"] {
+	cursor: pointer;
+}
+
+.noMarginDiv, .spinbox {
+	margin: 0;
+}
+
+/* Short buttons */
+.shortBtn {
+	position: relative;
+	min-width: 40px;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	background: transparent;
+}
+
+.shortBtn:hover, .spinbox button:hover {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+.shortBtn:active, spinbox button:active {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#playBtn::before {
+	position: absolute;
+	content: '';
+	left: 10px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border-left: 20px solid white;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+#pauseBtn {
+	display: none;
+}
+
+#pauseBtn::before, #pauseBtn::after {
+	position: absolute;
+	content: '';
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5px;
+	height: 20px;
+	background: white;
+}
+
+#pauseBtn::before {
+	left: 12px;
+}
+
+#pauseBtn::after {
+	right: 12px;
+}
+
+/* Range input */
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 300px;
+	height: 8px;
+	background: linear-gradient(135deg, #0066ff, #00ccff);
+	border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #00ccff;
+	box-shadow: 0 0 10px #00ccff;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+	transform: scale(1.05);
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #00ccff;
+	box-shadow: 0 0 10px #00ccff;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+	transform: scale(1.05);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #14141f;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #00ccff;
+	border-radius: 5px;
+}
+
+header, #uploadDiv, section {
+	animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
